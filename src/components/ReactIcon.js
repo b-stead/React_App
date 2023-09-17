@@ -14,8 +14,18 @@ function ReactIcon() {
   };
 
   const handleMouseMove = (e) => {
-    // Calculate the new icon size based on cursor position (both horizontal and vertical)
-    const newSize = 100 + (e.clientX / window.innerWidth) * 30 + (e.clientY / window.innerHeight) * 30; // Adjust as needed
+    // Get the center coordinates of the logo
+    const logoRect = document.querySelector('.App-logo').getBoundingClientRect();
+    const logoCenterX = logoRect.left + logoRect.width / 2;
+    const logoCenterY = logoRect.top + logoRect.height / 2;
+  
+    // Calculate the distance between the cursor and the logo's center
+    const dx = e.clientX - logoCenterX;
+    const dy = e.clientY - logoCenterY;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+  
+    // Calculate the new icon size based on the distance
+    const newSize = 300 - distance * 0.1; // Adjust the factor to control the sensitivity
     setIconSize(newSize);
   };
 
