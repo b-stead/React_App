@@ -1,6 +1,7 @@
 // Sidebar.js
 
 import React from 'react';
+import ToggleSwitch from './ToggleSwitch';
 
 function Sidebar({
   isRotationOn,
@@ -13,35 +14,17 @@ function Sidebar({
   return (
     <div className="Sidebar">
       <div className="ToggleOption">
-        <h3>Options</h3>
-        <label>
-          <input
-            type="checkbox"
-            checked={isRotationOn}
-            onChange={onToggleRotation}
-          />
-          Rotate Logo
-        </label>
+        <h3> Options </h3>
+        <ToggleSwitch isChecked={isRotationOn} onChange={onToggleRotation} />
+        Rotate
       </div>
       <div className="ToggleOption">
-        <label>
-          <input
-            type="checkbox"
-            checked={isSizeOn}
-            onChange={onToggleSize}
-          />
-          Resize Logo
-        </label>
+        <ToggleSwitch isChecked={isSizeOn} onChange={onToggleSize} />
+        Resize
       </div>
       <div className="ToggleOption">
-        <label>
-          <input
-            type="checkbox"
-            checked={isIdleTimeOn}
-            onChange={onToggleIdleTime}
-          />
-          Mouse Idle Time
-        </label>
+        <ToggleSwitch isChecked={isIdleTimeOn} onChange={onToggleIdleTime} />
+        Idle Time
       </div>
     </div>
   );
