@@ -1,5 +1,6 @@
 
 import ReactIcon from './components/ReactIcon';
+import IdleTimeTracker from './components/IdleTimeTracker';
 import './App.css';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
       <header className="App-header">
       <ReactIcon />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <IdleTimeTracker /> {/* Add the IdleTimeTracker component */}
         </p>
         <a
           className="App-link"
