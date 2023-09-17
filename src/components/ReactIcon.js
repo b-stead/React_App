@@ -3,14 +3,16 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../assets/logo.svg';
 
-function ReactIcon() {
+function ReactIcon({ isRotationOn, isSizeOn}) {
   const [isClockwise, setIsClockwise] = useState(true);
   const [iconSize, setIconSize] = useState(100); // Initial size
   
 
   const handleIconClick = () => {
     // Toggle the rotation direction
-    setIsClockwise(!isClockwise);
+    if (isRotationOn) {
+        setIsClockwise(!isClockwise);
+      }
   };
 
   const handleMouseMove = (e) => {
@@ -25,8 +27,10 @@ function ReactIcon() {
     const distance = Math.sqrt(dx * dx + dy * dy);
   
     // Calculate the new icon size based on the distance
-    const newSize = 300 - distance * 0.1; // Adjust the factor to control the sensitivity
+    if (isSizeOn) {
+        const newSize = 300 - distance * 0.1; // Adjust the factor to control the sensitivity
     setIconSize(newSize);
+    }
   };
 
   const rotationStyle = {
@@ -45,7 +49,7 @@ function ReactIcon() {
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []); // Empty dependency array ensures the event listener is added/removed only once
+  }, ); // Empty dependency array ensures the event listener is added/removed only once
 
 
   return (
