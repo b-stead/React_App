@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+
 import ReactIcon from './components/ReactIcon';
-import logo from './assets/logo.svg';
 import './App.css';
 
 function App() {
