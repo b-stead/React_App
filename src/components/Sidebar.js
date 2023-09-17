@@ -1,21 +1,48 @@
+// Sidebar.js
+
 import React from 'react';
 
-function Sidebar({ onToggleRotation, onToggleSize, onToggleIdleTime }) {
+function Sidebar({
+  isRotationOn,
+  isSizeOn,
+  isIdleTimeOn,
+  onToggleRotation,
+  onToggleSize,
+  onToggleIdleTime,
+}) {
   return (
     <div className="Sidebar">
-      <h2>Options</h2>
-      <label>
-        <input type="checkbox" onChange={onToggleRotation} />
-        Toggle Rotation
-      </label>
-      <label>
-        <input type="checkbox" onChange={onToggleSize} />
-        Toggle Size
-      </label>
-      <label>
-        <input type="checkbox" onChange={onToggleIdleTime} />
-        Toggle Idle Time
-      </label>
+      <div className="ToggleOption">
+        <h3>Options</h3>
+        <label>
+          <input
+            type="checkbox"
+            checked={isRotationOn}
+            onChange={onToggleRotation}
+          />
+          Rotate Logo
+        </label>
+      </div>
+      <div className="ToggleOption">
+        <label>
+          <input
+            type="checkbox"
+            checked={isSizeOn}
+            onChange={onToggleSize}
+          />
+          Resize Logo
+        </label>
+      </div>
+      <div className="ToggleOption">
+        <label>
+          <input
+            type="checkbox"
+            checked={isIdleTimeOn}
+            onChange={onToggleIdleTime}
+          />
+          Mouse Idle Time
+        </label>
+      </div>
     </div>
   );
 }

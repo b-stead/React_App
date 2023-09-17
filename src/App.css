@@ -1,7 +1,21 @@
 .App {
   text-align: center;
 }
+/* Adjust the position of the sidebar */
+.Sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width:150px;
+  height: 100%;
+  background-color: #424a58; /* Set your preferred background color */
+  padding: 20px; /* Add padding for better spacing */
+}
 
+/* Style the toggle options */
+.ToggleOption {
+  margin-bottom: 10px; /* Add spacing between toggle options */
+}
 .App-logo {
   height: 40vmin;
 }

@@ -24,23 +24,25 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Sidebar
-          isRotationOn={isRotationOn}
-          isSizeOn={isSizeOn}
-          isIdleTimeOn={isIdleTimeOn}
-          onToggleRotation={handleToggleRotation}
-          onToggleSize={handleToggleSize}
-          onToggleIdleTime={handleToggleIdleTime}
-        />
-        <ReactIcon
+      <ReactIcon
           isRotationOn={isRotationOn}
           isSizeOn={isSizeOn}
         />
         <p>
-        <IdleTimeTracker 
-          isIdleTimeOn={isIdleTimeOn}
+          <IdleTimeTracker
+            isIdleTimeOn={isIdleTimeOn}
           />
         </p>
+        <div className="Sidebar"> {/* Apply the Sidebar class */}
+          <Sidebar
+            isRotationOn={isRotationOn}
+            isSizeOn={isSizeOn}
+            isIdleTimeOn={isIdleTimeOn}
+            onToggleRotation={handleToggleRotation}
+            onToggleSize={handleToggleSize}
+            onToggleIdleTime={handleToggleIdleTime}
+          />
+        </div>
       </header>
     </div>
   );
