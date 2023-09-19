@@ -1,39 +1,33 @@
+
 .App {
   text-align: center;
+  position: relative;
 }
-/* Adjust the position of the sidebar */
-.Sidebar {
+.menu-container {
   position: absolute;
   top: 0;
   right: 0;
-  width:170px;
+  padding: 20px;
+}
+
+.top-right-icon {
+  font-size: 24px; /* Adjust the font size as needed */
+  cursor: pointer;
+  top: 0;
+  right: 20;
+  /* You can add more styles as needed, such as color or hover effects */
+}
+/* Adjust the position of the sidebar */
+.Sidebar {
+  position: relative;
+  top: 0;
+  right: 0;
+  width:200px;
   height: 100%;
   background-color: #424a58; /* Set your preferred background color */
   padding: 20px; /* Add padding for better spacing */
 }
 
-/* Style the ToggleSwitch class for the switch container */
-.ToggleSwitch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 30px;
-  background-color: #f81313;
-  border-radius: 30px;
-}
-
-/* Style the Slider class for the switch handle */
-.Slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #11ce3a;
-  border-radius: 30px;
-  transition: 0.4s;
-}
 
 /* Style the On and Off classes for the switch appearance */
 .On .Slider {
