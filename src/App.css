@@ -1,7 +1,42 @@
+
 .App {
   text-align: center;
+  position: relative;
+}
+.menu-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
 }
 
+.top-right-icon {
+  font-size: 24px; 
+  cursor: pointer;
+  top: 0;
+  left: 0;
+
+}
+
+.Sidebar {
+  position: relative;
+  top: 0;
+  right: 0;
+  width:200px;
+  height: 100%;
+  background-color: #424a58;
+  padding: 20px; 
+}
+
+
+/* Style the On and Off classes for the switch appearance */
+.On .Slider {
+  transform: translateX(30px);
+}
+
+.Off .Slider {
+  transform: translateX(0);
+}
 .App-logo {
   height: 40vmin;
 }
