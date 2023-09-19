@@ -8,7 +8,7 @@ function IdleTimeTracker({ isIdleTimeOn }) {
     if (isIdleTimeOn) {
       idleTimerRef.current = setInterval(() => {
         setIdleTime((prevIdleTime) => prevIdleTime + 1);
-      }, 1000); // Adjust the interval as needed (1 second in this example)
+      }, 1000);
     }
   };
 

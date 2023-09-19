@@ -1,18 +1,18 @@
 .switch {
   position: relative;
-  display: flex; /* Use flex display */
-  align-items: center; /* Vertically align items */
-  width: 60px; /* Adjust the width as needed */
+  display: flex; 
+  align-items: center; 
+  width: 60px; 
   height: 34px;
   outline: none;
   margin:0px;
 }
 .OptionLabel {
-  display: flex; /* Use flex display */
-  align-items: center; /* Vertically align items */
+  display: flex;
+  align-items: center; 
 }
 .ToggleOption {
-  margin-bottom: 10px; /* Adjust the margin-bottom as needed */
+  margin-bottom: 10px;
 }
 .switch input {
   position: absolute;

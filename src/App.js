@@ -40,7 +40,7 @@ function App() {
         </p>
         <div className="menu-container">
         <i className={`fas ${isSidebarVisible ? 'fa-times' : 'fa-bars'} ${isSidebarVisible ? 'active' : ''} top-right-icon`} onClick={handleToggleSidebar}></i>
-
+        
         {isSidebarVisible && ( // Render the sidebar if isSidebarVisible is true
         <div className="Sidebar"> 
           <Sidebar
