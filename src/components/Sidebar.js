@@ -11,21 +11,27 @@ function Sidebar({
 }) {
 
   return (
-    <div className= "Sidebar">
-      <div className="ToggleOption">
-        <h3>Options</h3>
-        <ToggleSwitch isChecked={isRotationOn} onChange={onToggleRotation} />
-        Rotate
-      </div>
-      <div className="ToggleOption">
-        <ToggleSwitch isChecked={isSizeOn} onChange={onToggleSize} />
-        Resize
-      </div>
-      <div className="ToggleOption">
-        <ToggleSwitch isChecked={isIdleTimeOn} onChange={onToggleIdleTime} />
-        Idle Time
-      </div>
-    </div>
+    <div className="Sidebar">
+  <h3>Options</h3>
+  <div className="ToggleOption">
+    <label className="OptionLabel">
+      <ToggleSwitch isChecked={isRotationOn} onChange={onToggleRotation} />
+      Rotate
+    </label>
+  </div>
+  <div className="ToggleOption">
+    <label className="OptionLabel">
+      <ToggleSwitch isChecked={isSizeOn} onChange={onToggleSize} />
+      Resize
+    </label>
+  </div>
+  <div className="ToggleOption">
+    <label className="OptionLabel">
+      <ToggleSwitch isChecked={isIdleTimeOn} onChange={onToggleIdleTime} />
+      Idle Time
+    </label>
+  </div>
+</div>
   );
 }
 
